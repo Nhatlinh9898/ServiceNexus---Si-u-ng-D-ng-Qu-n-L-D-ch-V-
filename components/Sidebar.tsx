@@ -10,7 +10,7 @@ import {
   Pickaxe, Fish, Trees, Hammer, FlaskConical,
   Rocket, Globe, Tv, Heart, Key,
   Dna, Cpu, Satellite, Map, Landmark,
-  Network, Users, BarChart3, FileText, Brain
+  Network, Users
 } from 'lucide-react';
 import { IndustryType } from '../types';
 
@@ -55,31 +55,6 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onChangeView, currentInd
         <div onClick={() => onChangeView('AI_ASSISTANT')} className={navItemClass(currentView === 'AI_ASSISTANT')}>
           <Bot size={20} />
           <span>Trợ lý Vận hành AI</span>
-        </div>
-
-        <div onClick={() => onChangeView('AI_MANAGEMENT')} className={navItemClass(currentView === 'AI_MANAGEMENT')}>
-          <Settings size={20} />
-          <span>AI Management Center</span>
-        </div>
-
-        <div onClick={() => onChangeView('ANALYTICS')} className={navItemClass(currentView === 'ANALYTICS')}>
-          <BarChart3 size={20} />
-          <span>Analytics Dashboard</span>
-        </div>
-
-        <div onClick={() => onChangeView('REPORTS')} className={navItemClass(currentView === 'REPORTS')}>
-          <FileText size={20} />
-          <span>Reports</span>
-        </div>
-
-        <div onClick={() => onChangeView('CUSTOMERS')} className={navItemClass(currentView === 'CUSTOMERS')}>
-          <Users size={20} />
-          <span>Customer Management</span>
-        </div>
-
-        <div onClick={() => onChangeView('DATA_PROCESSING')} className={navItemClass(currentView === 'DATA_PROCESSING')}>
-          <Brain size={20} />
-          <span>Data Processing AI</span>
         </div>
 
         <div className="mt-8 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-4">Ngành Dịch Vụ Cơ Bản</div>

@@ -6,11 +6,6 @@ import OperationsTable from './components/OperationsTable';
 import IndustryManagement from './components/IndustryManagement';
 import OrganizationManager from './components/OrganizationManager';
 import AIConsultant from './components/AIConsultant';
-import AIManagementDashboard from './src/components/AIManagementDashboard';
-import AnalyticsDashboard from './src/components/AnalyticsDashboard';
-import ReportsPage from './src/components/ReportsPage';
-import CustomerManagement from './src/components/CustomerManagement';
-import DataProcessingAI from './src/components/DataProcessingAI';
 import { IndustryType, ServiceRecord, Status } from './types';
 import { Bell, UserCircle } from 'lucide-react';
 
@@ -112,7 +107,6 @@ const App: React.FC = () => {
   const getHeaderTitle = () => {
     if (currentView === 'DASHBOARD') return 'Bảng Điều Khiển Trung Tâm';
     if (currentView === 'AI_ASSISTANT') return 'Trợ Lý Tư Vấn Vận Hành';
-    if (currentView === 'AI_MANAGEMENT') return 'AI Management Center';
     if (currentView === 'ORGANIZATION') return 'Sơ Đồ & Cơ Cấu Tổ Chức';
     if (currentView === 'OPERATIONS') {
         switch(currentIndustry) {
@@ -210,26 +204,6 @@ const App: React.FC = () => {
 
                 {currentView === 'AI_ASSISTANT' && (
                     <AIConsultant />
-                )}
-
-                {currentView === 'AI_MANAGEMENT' && (
-                    <AIManagementDashboard />
-                )}
-
-                {currentView === 'ANALYTICS' && (
-                    <AnalyticsDashboard />
-                )}
-
-                {currentView === 'REPORTS' && (
-                    <ReportsPage />
-                )}
-
-                {currentView === 'CUSTOMERS' && (
-                    <CustomerManagement />
-                )}
-
-                {currentView === 'DATA_PROCESSING' && (
-                    <DataProcessingAI />
                 )}
 
                 {currentView === 'ORGANIZATION' && (

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Sparkles } from 'lucide-react';
-import { getOperationalAdvice } from '../services/enhancedGeminiService';
+import { getOperationalAdvice } from '../services/geminiService';
 import { ChatMessage } from '../types';
 
 const AIConsultant: React.FC = () => {
